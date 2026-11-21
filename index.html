@@ -1,201 +1,478 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f8f9fc">
-<title>Vinayak Khonde — Websites That Grow Businesses</title>
-<meta name="description" content="Vinayak Khonde creates premium, modern websites for local businesses and brands.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vinayak Khonde — Web Developer for Local Businesses</title>
+<meta name="description" content="Custom 1-page business websites, WhatsApp ordering storefronts & modern landing pages for local shops in Sendhwa & M.P. Book a free demo.">
+<meta name="theme-color" content="#FAF4EC">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%237C3F18'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='28' font-style='italic' font-weight='700' fill='%23FAF4EC' font-family='Georgia,serif'%3EVK%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FAF4EC',
+          sand: '#F3E7DA',
+          brand: '#7C3F18',
+          brandDark: '#5E2E10',
+          caramel: '#A85A2A',
+          espresso: '#1E1815',
+          muted: '#6B5B52',
+          line: '#E6D7C8'
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+
 <style>
-:root{--blue:#2457ed;--ink:#101114;--muted:#686b75;--bg:#f8f9fc;--line:#e7e9ef}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.wrap{width:min(1160px,90%);margin:auto}
-nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.logo{font-family:Manrope;font-size:21px;font-weight:800;letter-spacing:-1px}
-.logo span{color:var(--blue)}
-.navlinks{display:flex;gap:34px;align-items:center;font-size:13px;font-weight:600}
-.navlinks a:hover{color:var(--blue)}
-.nav-cta,.btn{background:var(--blue);color:white;padding:14px 21px;border-radius:7px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:10px;transition:.25s}
-.nav-cta:hover,.btn:hover{background:#123fc9;transform:translateY(-3px)}
-.menu{display:none;background:none;border:0;font-size:26px}
-.hero{padding:105px 0 90px;position:relative}
-.eyebrow{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
-.eyebrow:before{content:"";width:25px;height:2px;background:var(--blue)}
-.hero h1{font-family:Manrope;font-size:clamp(48px,8vw,91px);line-height:1.04;letter-spacing:-5px;max-width:900px;margin:27px 0}
-.hero h1 span{color:var(--blue)}
-.hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-top:35px}
-.hero-bottom p{max-width:440px;color:var(--muted);font-size:16px;line-height:1.8}
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
-.btn-outline{border:1px solid #cfd3de;padding:14px 21px;border-radius:7px;font-size:13px;font-weight:700;transition:.2s}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
-.hero-note{margin-top:75px;border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
-.section{padding:100px 0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
-.section-label{color:var(--blue);font-size:11px;letter-spacing:2px;font-weight:800;text-transform:uppercase}
-.section h2{font-family:Manrope;font-size:clamp(35px,5vw,57px);letter-spacing:-2.5px;line-height:1.12;margin-top:13px}
-.section-head p{max-width:330px;color:var(--muted);font-size:14px;line-height:1.8}
-.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.project{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:white;transition:.3s}
-.project:hover{transform:translateY(-6px);box-shadow:0 18px 45px #17234a12}
-.project-visual{height:300px;padding:25px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.visual-one{background:#e8edf9}
-.visual-two{background:#e9e7df}
-.browser{background:white;border-radius:9px;width:100%;height:100%;box-shadow:0 15px 35px #17234a18;overflow:hidden}
-.browser-top{height:24px;background:#f4f5f7;border-bottom:1px solid #eee;display:flex;align-items:center;padding:0 10px;gap:4px}
-.browser-top i{width:6px;height:6px;border-radius:50%;background:#c7cad1}
-.mock-content{padding:23px}
-.mock-brand{font-size:10px;font-weight:800;letter-spacing:1px}
-.mock-title{font-family:Manrope;font-weight:800;font-size:28px;line-height:1.12;margin:28px 0 10px}
-.mock-text{font-size:9px;color:#777;line-height:1.6}
-.mock-button{display:inline-block;background:var(--blue);color:white;font-size:8px;padding:8px 12px;border-radius:3px;margin-top:15px}
-.barber .mock-title{color:#bd9b5b}
-.barber .mock-button{background:#17243c}
-.project-info{padding:23px 25px 27px}
-.project-meta{font-size:10px;color:var(--blue);font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.project-info h3{font-family:Manrope;font-size:23px;margin:10px 0}
-.project-info p{font-size:13px;color:var(--muted);line-height:1.7}
-.project-link{display:inline-block;margin-top:17px;font-size:12px;font-weight:700;color:var(--blue)}
-.services{background:#101114;color:white}
-.services .section-head p{color:#a5a7af}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #33343a}
-.service{padding:32px 25px 32px 0;border-bottom:1px solid #33343a}
-.service-number{font-size:11px;color:#8d909b}
-.service h3{font-family:Manrope;font-size:22px;margin:27px 0 12px}
-.service p{font-size:13px;line-height:1.8;color:#a5a7af;max-width:280px}
-.service-icon{font-size:24px;color:#7291ff}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-card{background:#e9eefc;border-radius:14px;min-height:340px;padding:35px;display:flex;flex-direction:column;justify-content:space-between}
-.about-mark{font-family:Manrope;font-size:80px;font-weight:800;color:var(--blue);letter-spacing:-7px}
-.about-card p{font-size:13px;color:#58627b;line-height:1.8;max-width:280px}
-.about-copy>p{font-size:15px;color:var(--muted);line-height:1.9;margin:23px 0}
-.skills{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}
-.skills span{padding:9px 13px;border:1px solid var(--line);border-radius:5px;font-size:11px;font-weight:600}
-.contact{background:#edf1fc;padding:90px 0}
-.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:35px}
-.contact h2{font-family:Manrope;font-size:clamp(40px,6vw,67px);letter-spacing:-3px;line-height:1.1;margin:15px 0}
-.contact p{color:var(--muted);font-size:14px;line-height:1.8;max-width:430px}
-footer{padding:30px 0}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:12px}
-.footer-social{display:flex;gap:20px}
-.footer-social a:hover{color:var(--blue)}
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
-.reveal.show{opacity:1;transform:translateY(0)}
-@media(max-width:760px){
- nav{height:70px}.menu{display:block}.navlinks{display:none;position:absolute;top:70px;left:0;width:100%;background:var(--bg);padding:25px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line);z-index:10}.navlinks.open{display:flex}
- .hero{padding:75px 0 65px}.hero h1{letter-spacing:-3px}.hero-bottom{align-items:flex-start;flex-direction:column}.hero-note{margin-top:50px;gap:15px;flex-wrap:wrap}
- .section{padding:75px 0}.section-head{align-items:flex-start;flex-direction:column;margin-bottom:30px}.work-grid{grid-template-columns:1fr}.project-visual{height:250px}.service-grid{grid-template-columns:1fr}.service{padding:25px 0}.service h3{margin:15px 0 8px}
- .about-grid{grid-template-columns:1fr;gap:35px}.about-card{min-height:260px}.about-mark{font-size:65px}.contact-inner{align-items:flex-start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+  :root{
+    --cream:#FAF4EC; --sand:#F3E7DA; --brand:#7C3F18;
+    --caramel:#A85A2A; --espresso:#1E1815; --muted:#6B5B52; --line:#E6D7C8;
+    --ease:cubic-bezier(.22,.8,.24,1);
+  }
+  html{scroll-behavior:smooth;scroll-padding-top:80px;background:var(--cream);overflow-x:clip;-webkit-text-size-adjust:100%}
+  body{background:var(--cream);color:var(--espresso);min-height:100vh;overflow-x:hidden;-webkit-tap-highlight-color:transparent;text-rendering:optimizeLegibility}
+  [hidden]{display:none!important}
+  ::selection{background:var(--brand);color:#fff}
+  button,a{touch-action:manipulation}
+
+  /* Header Glass */
+  .glass{background:rgba(250,244,236,.88);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+
+  /* Logo Mark */
+  .vk-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--brand);color:#FAF4EC;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:1.15rem;box-shadow:0 8px 18px -8px rgba(124,63,24,.55)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.65rem 1.35rem;border-radius:999px;font-weight:700;font-size:.9rem;line-height:1.2;text-align:center;white-space:normal;transition:transform .2s var(--ease),box-shadow .25s,background-color .2s,border-color .2s;cursor:pointer}
+  .btn:active{transform:scale(.97)}
+  .btn-brand{background:var(--brand);color:#fff;box-shadow:0 12px 24px -10px rgba(124,63,24,.55)}
+  .btn-wa{background:#1F9D55;color:#fff;box-shadow:0 12px 24px -10px rgba(31,157,85,.5)}
+  .btn-soft{background:#fff;color:var(--espresso);border:1.5px solid var(--line)}
+  @media (hover:hover){
+    .btn-brand:hover{background:#5E2E10;transform:translateY(-1px)}
+    .btn-wa:hover{background:#188446;transform:translateY(-1px)}
+    .btn-soft:hover{border-color:var(--brand);color:var(--brand)}
+  }
+
+  /* Cards & Surfaces */
+  .card{background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 34px -22px rgba(30,24,21,.16);transition:transform .25s var(--ease),border-color .25s,box-shadow .25s}
+  @media (hover:hover){
+    .card-hover:hover{transform:translateY(-3px);border-color:var(--caramel);box-shadow:0 20px 40px -22px rgba(124,63,24,.22)}
+  }
+
+  /* Slot Buttons (Setav Style) */
+  .slot-btn{border:1.5px solid var(--line);background:var(--cream);color:var(--espresso);border-radius:14px;padding:.65rem .5rem;font-size:.82rem;font-weight:600;text-align:center;transition:all .2s var(--ease);cursor:pointer}
+  .slot-btn[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:0 8px 18px -8px rgba(124,63,24,.6)}
+  @media (hover:hover){
+    .slot-btn[aria-pressed="false"]:hover{border-color:var(--caramel);background:#fff}
+  }
+
+  /* Inputs */
+  .field{width:100%;min-height:46px;padding:.7rem 1rem;border-radius:14px;background:var(--cream);border:1.5px solid var(--line);color:var(--espresso);font-size:16px;font-family:inherit;transition:border-color .2s,background-color .2s}
+  .field:focus{outline:none;border-color:var(--brand);background:#fff}
+
+  /* Subtle Rise */
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .rise{opacity:0;animation:rise .65s var(--ease) forwards;animation-delay:var(--d,0s)}
+  @media (prefers-reduced-motion:reduce){.rise{opacity:1;animation:none}}
 </style>
 </head>
-<body>
-<header class="wrap">
-<nav>
-<a class="logo" href="#">VINAYAK<span>.</span></a>
-<button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-<div class="navlinks" id="navlinks">
-<a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a>
-<a class="nav-cta" href="#contact">Let's Talk ↗</a>
-</div>
-</nav>
+
+<body class="font-sans antialiased">
+
+<!-- Icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path fill="currentColor" d="M9.2 7.9c-.3 0-.7.2-.9.6-.5 1-.1 2.5 1.2 4.1 1.4 1.7 3 2.5 4.2 2.5.6 0 1.2-.3 1.4-.9l.1-.6-1.6-.9-.8.7c-.7-.2-1.7-1.1-2.2-1.9l.6-.8-.8-1.8-.6-.1z"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 5.3 5.3l1.4-2.2L19 14.5V18a2 2 0 0 1-2 2A13 13 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="glass sticky top-0 z-40">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 min-w-0">
+      <span class="vk-mark flex-none">VK</span>
+      <span class="leading-tight truncate">
+        <span class="block font-serif text-lg font-bold text-espresso">Vinayak Khonde</span>
+        <span class="block text-[11px] font-bold tracking-wider uppercase text-caramel">Web Developer</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-muted">
+      <a href="#work" class="hover:text-brand transition-colors">Live Work</a>
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#book" class="hover:text-brand transition-colors">Book Demo</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="#book" class="btn btn-brand !min-h-[40px] !px-4 !text-xs sm:!text-sm">Book Free Demo</a>
+      <button id="menuBtn" type="button" class="md:hidden h-10 w-10 grid place-items-center rounded-full border border-line bg-white text-espresso" aria-label="Menu" aria-expanded="false">
+        <svg class="h-5 w-5"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden border-t border-line bg-cream px-4 py-3" hidden>
+    <div class="grid gap-1 text-base font-serif font-bold text-espresso">
+      <a href="#work" class="m-link py-2.5">Live Work</a>
+      <a href="#services" class="m-link py-2.5">Services &amp; Pricing</a>
+      <a href="#book" class="m-link py-2.5">Book a Free Demo</a>
+      <a href="#contact" class="m-link py-2.5">Contact</a>
+    </div>
+  </div>
 </header>
 
-<main>
-<section class="hero wrap">
-<div class="eyebrow">Independent Web Developer</div>
-<h1>I build websites<br>that make businesses<br><span>stand out.</span></h1>
-<div class="hero-bottom">
-<p>I help local businesses build a strong online presence with modern, premium and user-friendly websites that turn visitors into customers.</p>
-<div class="hero-actions">
-<a class="btn" href="#work">Explore My Work ↗</a>
-<a class="btn-outline" href="#contact">Get In Touch</a>
-</div>
-</div>
-<div class="hero-note"><span>BASED IN MADHYA PRADESH, INDIA</span><span>AVAILABLE FOR PROJECTS ↗</span></div>
+<main id="top">
+<!-- ============ HERO + INTERACTIVE BOOKING CARD ============ -->
+<section class="relative pt-10 pb-14 lg:pt-16 lg:pb-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-10 items-center">
+
+    <!-- Left Editorial Pitch -->
+    <div class="lg:col-span-7 min-w-0">
+      <div class="rise inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sand border border-line text-xs font-bold text-brand tracking-wide uppercase" style="--d:.05s">
+        <span class="h-2 w-2 rounded-full bg-[#1F9D55]"></span>
+        Sendhwa, M.P. • Taking New Clients
+      </div>
+
+      <h1 class="rise font-serif text-[2.45rem] sm:text-[3.5rem] lg:text-[3.9rem] leading-[1.06] font-bold text-espresso mt-5 tracking-tight" style="--d:.12s">
+        Your business,
+        <span class="block italic text-caramel mt-1">live and booking.</span>
+      </h1>
+
+      <p class="rise mt-5 max-w-xl text-[1rem] sm:text-[1.08rem] leading-relaxed text-muted" style="--d:.2s">
+        Main local shops, cafes, mithai stores, salons aur boutiques ke liye fast, mobile-first websites aur <strong>WhatsApp ordering storefronts</strong> banata hoon — taaki aapke customers seedha phone se order aur book kar sakein.
+      </p>
+
+      <div class="rise mt-7 flex flex-wrap gap-3" style="--d:.28s">
+        <a href="#work" class="btn btn-brand flex-1 sm:flex-none !px-6">See Live Websites</a>
+        <a href="https://wa.me/917247448775?text=Hi%20Vinayak!%20Mujhe%20apne%20business%20ke%20liye%20website%20banwani%20hai." target="_blank" rel="noopener" class="btn btn-soft flex-1 sm:flex-none !px-6">
+          <svg class="h-5 w-5 text-[#1F9D55] flex-none"><use href="#i-wa"/></svg>WhatsApp Me
+        </a>
+      </div>
+
+      <div class="rise mt-8 pt-6 border-t border-line grid grid-cols-3 gap-4 max-w-md" style="--d:.35s">
+        <div>
+          <p class="font-serif text-2xl font-bold text-brand">48 hrs</p>
+          <p class="text-xs text-muted mt-0.5">Fast Demo Ready</p>
+        </div>
+        <div>
+          <p class="font-serif text-2xl font-bold text-brand">100%</p>
+          <p class="text-xs text-muted mt-0.5">Mobile Friendly</p>
+        </div>
+        <div>
+          <p class="font-serif text-2xl font-bold text-brand">₹0</p>
+          <p class="text-xs text-muted mt-0.5">Monthly Hosting</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Setav-Style Interactive Booking Card -->
+    <div id="book" class="lg:col-span-5 min-w-0 rise" style="--d:.22s">
+      <div class="card p-5 sm:p-6">
+        <div class="flex items-center justify-between gap-2 pb-4 border-b border-line">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="vk-mark !w-9 !h-9 !text-sm flex-none">VK</span>
+            <div class="min-w-0">
+              <p class="text-sm font-bold text-espresso truncate">Book a Free Demo Call</p>
+              <p class="text-xs text-muted truncate">10-min WhatsApp / Call Discussion</p>
+            </div>
+          </div>
+          <span class="px-2.5 py-1 rounded-full bg-sand text-[11px] font-bold text-brand flex-none">Free</span>
+        </div>
+
+        <div class="mt-4">
+          <p class="text-xs font-bold uppercase tracking-wider text-muted mb-2.5">1. Select Date</p>
+          <div id="dateGrid" class="grid grid-cols-4 gap-2"></div>
+        </div>
+
+        <div class="mt-4">
+          <p class="text-xs font-bold uppercase tracking-wider text-muted mb-2.5">2. Select Time Slot</p>
+          <div id="timeGrid" class="grid grid-cols-3 gap-2"></div>
+        </div>
+
+        <div class="mt-4">
+          <label for="bizName" class="block text-xs font-bold uppercase tracking-wider text-muted mb-1.5">3. Your Shop / Business Name</label>
+          <input id="bizName" type="text" class="field" placeholder="e.g. Sharma Sweets / Royal Salon" maxlength="60">
+        </div>
+
+        <a id="bookBtn" href="#" target="_blank" rel="noopener" class="btn btn-wa w-full mt-5">
+          <svg class="h-5 w-5 flex-none"><use href="#i-wa"/></svg>
+          <span>Confirm Slot on WhatsApp</span>
+        </a>
+        <p class="mt-2.5 text-center text-[11px] text-muted">Direct WhatsApp confirmation on <strong>+91 72474 48775</strong></p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section class="section wrap" id="work">
-<div class="section-head reveal">
-<div><div class="section-label">Selected Work / 01</div><h2>Turning ideas<br>into digital experiences.</h2></div>
-<p>A selection of website concepts and projects focused on clean design, strong identity and great user experience.</p>
-</div>
-<div class="work-grid">
-<article class="project reveal">
-<div class="project-visual visual-one">
-<div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="mock-content">
-<div class="mock-brand">YOUR BRAND.</div><div class="mock-title">Make your<br>business<br>unforgettable.</div><div class="mock-text">A modern digital experience<br>for ambitious local businesses.</div><span class="mock-button">Explore More ↗</span>
-</div></div>
-</div>
-<div class="project-info"><div class="project-meta">WEB DESIGN · BUSINESS</div><h3>Local Business Website</h3><p>A clean, modern website concept designed to help a local business build trust and attract customers.</p><a class="project-link" href="#contact">Build something similar ↗</a></div>
-</article>
-<article class="project reveal">
-<div class="project-visual visual-two">
-<div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="mock-content barber">
-<div class="mock-brand">VAIBHAV'S STUDIO</div><div class="mock-title">STYLE IS<br>YOUR<br>IDENTITY.</div><div class="mock-text">Premium grooming. Timeless style.<br>Since 2017.</div><span class="mock-button">EXPLORE SERVICES ↗</span>
-</div></div>
-</div>
-<div class="project-info"><div class="project-meta">WEB DESIGN · BARBERSHOP</div><h3>Vaibhav's Studio</h3><p>A premium barbershop website concept with a heritage-inspired visual identity and service presentation.</p><a class="project-link" href="https://vaibhav-s-studio.netlify.app/" target="_blank" rel="noopener">View Website ↗</a></div>
-</article>
-</div>
+<!-- ============ LIVE WORK / PORTFOLIO ============ -->
+<section id="work" class="py-14 lg:py-20 bg-sand/60 border-y border-line">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[.14em] text-caramel mb-1.5">Selected Projects</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso">Websites Built for Local Brands</h2>
+      </div>
+      <p class="max-w-sm text-sm text-muted">Clean design, fast loading speed, aur direct WhatsApp ordering flow — sab mobile ke liye optimized.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <!-- Project 1 -->
+      <article class="card card-hover p-5 flex flex-col">
+        <div class="flex items-center justify-between gap-2 mb-4">
+          <span class="px-3 py-1 rounded-full bg-sand text-xs font-bold text-brand">Mithai &amp; Cafe</span>
+          <span class="text-xs font-semibold text-[#1F9D55]">● Live Site</span>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-espresso">Shree Mithai &amp; Rasoi</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed flex-1">
+          Sendhwa ki heritage mithai shop ke liye Warm Ivory &amp; Royal Maroon boutique website — smart cart, instant WhatsApp bill generator aur Instagram ordering ke saath.
+        </p>
+        <div class="mt-5 pt-4 border-t border-line flex items-center justify-between gap-2">
+          <span class="text-xs font-semibold text-muted">WhatsApp Cart + Menu</span>
+          <a href="https://vinayakkhonde.github.io/Shree-mithi/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm font-bold text-brand hover:underline">
+            Visit Live <svg class="h-4 w-4"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card card-hover p-5 flex flex-col">
+        <div class="flex items-center justify-between gap-2 mb-4">
+          <span class="px-3 py-1 rounded-full bg-sand text-xs font-bold text-brand">Salon &amp; Grooming</span>
+          <span class="text-xs font-semibold text-muted">Client Work</span>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-espresso">Vaibhav's Studio</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed flex-1">
+          Mehtgaon ke popular grooming studio ke liye modern website — complete haircut menu, face-shape style recommendations aur direct appointment contact.
+        </p>
+        <div class="mt-5 pt-4 border-t border-line flex items-center justify-between gap-2">
+          <span class="text-xs font-semibold text-muted">Service Menu + Guide</span>
+          <a href="#book" class="inline-flex items-center gap-1 text-sm font-bold text-brand hover:underline">
+            Request Similar <svg class="h-4 w-4"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card card-hover p-5 flex flex-col">
+        <div class="flex items-center justify-between gap-2 mb-4">
+          <span class="px-3 py-1 rounded-full bg-sand text-xs font-bold text-brand">Boutique &amp; Fashion</span>
+          <span class="text-xs font-semibold text-muted">Storefront</span>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-espresso">Sneha Ethnic Studio</h3>
+        <p class="mt-2 text-sm text-muted leading-relaxed flex-1">
+          Sendhwa ethnic wear boutique ke liye digital showcase aur promotional catalog — customers directly saree &amp; ethnic collection dekh kar WhatsApp par inquiry kar sakte hain.
+        </p>
+        <div class="mt-5 pt-4 border-t border-line flex items-center justify-between gap-2">
+          <span class="text-xs font-semibold text-muted">Digital Catalog</span>
+          <a href="#book" class="inline-flex items-center gap-1 text-sm font-bold text-brand hover:underline">
+            Request Similar <svg class="h-4 w-4"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
-<section class="section services" id="services">
-<div class="wrap">
-<div class="section-head reveal">
-<div><div class="section-label">What I Do / 02</div><h2>Digital solutions<br>for real businesses.</h2></div>
-<p>Everything you need to create a professional online presence and make your brand memorable.</p>
-</div>
-<div class="service-grid">
-<div class="service reveal"><div class="service-icon">↗</div><div class="service-number">01 / DESIGN</div><h3>Website Design</h3><p>Beautiful, modern layouts that reflect your brand and create a strong first impression.</p></div>
-<div class="service reveal"><div class="service-icon">⌘</div><div class="service-number">02 / DEVELOPMENT</div><h3>Website Development</h3><p>Responsive, fast and functional websites that work smoothly across devices.</p></div>
-<div class="service reveal"><div class="service-icon">✳</div><div class="service-number">03 / EXPERIENCE</div><h3>Landing Pages</h3><p>Focused landing pages that communicate your offer clearly and encourage action.</p></div>
-</div>
-</div>
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-14 lg:py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <p class="text-xs font-bold uppercase tracking-[.14em] text-caramel mb-1.5">What I Build</p>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso">Simple Packages for Local Growth</h2>
+      <p class="mt-2.5 text-sm sm:text-base text-muted">Zero technical headache — design, mobile setup aur live link sab main handle karta hoon.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card p-6">
+        <p class="text-xs font-bold uppercase tracking-wider text-caramel">01 • Starter</p>
+        <h3 class="font-serif text-2xl font-bold text-espresso mt-1.5">1-Page Business Website</h3>
+        <p class="mt-2 text-sm text-muted">Doctors, coaching, shops, studios aur professionals ke liye clean digital identity.</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-espresso">
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>Mobile-First Premium Design</li>
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>Direct Call, Maps &amp; Instagram Links</li>
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>Free Lifetime Hosting Setup</li>
+        </ul>
+      </div>
+
+      <div class="card p-6 border-2 border-brand relative">
+        <span class="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-brand text-white text-[11px] font-bold uppercase tracking-wider">Most Popular</span>
+        <p class="text-xs font-bold uppercase tracking-wider text-caramel">02 • Storefront</p>
+        <h3 class="font-serif text-2xl font-bold text-espresso mt-1.5">WhatsApp Order Website</h3>
+        <p class="mt-2 text-sm text-muted">Mithai shops, cafes, bakeries, boutiques aur kirana stores ke liye best choice.</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-espresso">
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>Interactive Menu &amp; Add-to-Cart</li>
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>Auto-Calculated WhatsApp Bill</li>
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>Review &amp; Direct Inquiry Buttons</li>
+        </ul>
+      </div>
+
+      <div class="card p-6">
+        <p class="text-xs font-bold uppercase tracking-wider text-caramel">03 • Bio Link</p>
+        <h3 class="font-serif text-2xl font-bold text-espresso mt-1.5">Custom Bio &amp; Booking Page</h3>
+        <p class="mt-2 text-sm text-muted">Creators, freelancers aur salons ke liye custom Setav-style booking page.</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-espresso">
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>Date &amp; Time Slot Picker</li>
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>All Social &amp; UPI Links in One Place</li>
+          <li class="flex items-center gap-2"><svg class="h-4 w-4 text-brand flex-none"><use href="#i-check"/></svg>Zero Monthly Subscription Fees</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section wrap" id="about">
-<div class="about-grid">
-<div class="about-card reveal"><div class="about-mark">VK.</div><p>Curiosity drives me. Creativity shapes my work. Technology makes it possible.</p><div class="section-label">DESIGN · CODE · CREATE</div></div>
-<div class="about-copy reveal"><div class="section-label">A Little About Me / 03</div><h2>Hey, I'm Vinayak.</h2><p>I'm an aspiring web developer from Madhya Pradesh, India. I enjoy combining design and technology to create meaningful digital experiences for local businesses.</p><p>My goal is simple: make quality websites more accessible to businesses that want to grow.</p><div class="skills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span><span>AI Tools</span></div></div>
-</div>
-</section>
-
-<section class="contact" id="contact">
-<div class="wrap contact-inner">
-<div><div class="section-label">Have a project in mind? / 04</div><h2>Let's build<br>something great.</h2><p>Have a local business and need a website? Let's talk about your idea and create something that makes your business stand out.</p></div>
-<a class="btn" href="https://www.instagram.com/vinayak_k.42/" target="_blank" rel="noopener">Let's Talk on Instagram ↗</a>
-</div>
+<!-- ============ CTA BANNER ============ -->
+<section id="contact" class="px-4 sm:px-6 pb-16">
+  <div class="mx-auto max-w-6xl rounded-[28px] bg-brand text-cream p-6 sm:p-11 grid lg:grid-cols-12 gap-7 items-center shadow-xl">
+    <div class="lg:col-span-7 min-w-0">
+      <p class="text-xs font-bold uppercase tracking-[.15em] text-sand/80 mb-2">Start Today</p>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white leading-tight">Apne Business Ki Website Banwani Hai?</h2>
+      <p class="mt-3 text-sm sm:text-base text-sand/90 max-w-xl">
+        Koi bhi sawaal ho ya apne shop ka free sample demo dekhna ho — seedha WhatsApp ya Instagram par message karein!
+      </p>
+    </div>
+    <div class="lg:col-span-5 min-w-0 flex flex-col gap-3">
+      <a href="https://wa.me/917247448775?text=Hi%20Vinayak!%20Mujhe%20apne%20business%20ke%20liye%20website%20demo%20dekhna%20hai." target="_blank" rel="noopener" class="btn btn-wa w-full">
+        <svg class="h-5 w-5 flex-none"><use href="#i-wa"/></svg>WhatsApp (+91 72474 48775)
+      </a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        <a href="https://instagram.com/vinayak_k.42" target="_blank" rel="noopener" class="btn bg-white text-brand hover:bg-sand w-full !text-sm">
+          <svg class="h-4 w-4 flex-none"><use href="#i-insta"/></svg>@vinayak_k.42
+        </a>
+        <a href="tel:+917247448775" class="btn bg-transparent border border-sand/50 text-white hover:bg-white/10 w-full !text-sm">
+          <svg class="h-4 w-4 flex-none"><use href="#i-phone"/></svg>Call Now
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
 
-<footer class="wrap">
-<div class="footer-inner">
-<a class="logo" href="#">VINAYAK<span>.</span></a>
-<span>© <span id="year"></span> Vinayak Khonde. Built with purpose.</span>
-<div class="footer-social"><a href="#work">Work</a><a href="#about">About</a><a href="https://www.instagram.com/vinayak_k.42/" target="_blank" rel="noopener">Instagram ↗</a></div>
-</div>
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-line bg-sand/50 py-8">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted">
+    <p>&copy; 2026 <strong class="text-espresso">Vinayak Khonde</strong> • Web Developer, Sendhwa (M.P.)</p>
+    <div class="flex items-center gap-4 font-semibold">
+      <a href="https://instagram.com/vinayak_k.42" target="_blank" rel="noopener" class="hover:text-brand">Instagram</a>
+      <a href="https://github.com/vinayakkhonde" target="_blank" rel="noopener" class="hover:text-brand">GitHub</a>
+      <a href="tel:+917247448775" class="hover:text-brand">+91 72474 48775</a>
+    </div>
+  </div>
 </footer>
 
 <script>
-const menu=document.getElementById('menu');
-const nav=document.getElementById('navlinks');
-menu.addEventListener('click',()=>nav.classList.toggle('open'));
-document.querySelectorAll('.navlinks a').forEach(link=>link.addEventListener('click',()=>nav.classList.remove('open')));
-document.getElementById('year').textContent=new Date().getFullYear();
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}
-});
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+(function () {
+  'use strict';
+  var WA = '917247448775';
+  var selectedDate = '';
+  var selectedTime = '11:00 AM';
+
+  var TIMES = ['10:00 AM', '11:00 AM', '01:00 PM', '04:00 PM', '06:00 PM', '08:00 PM'];
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  var dateGrid = document.getElementById('dateGrid');
+  var timeGrid = document.getElementById('timeGrid');
+  var bizInput = document.getElementById('bizName');
+  var bookBtn = document.getElementById('bookBtn');
+
+  // Generate next 4 days dynamically
+  var dates = [];
+  for (var i = 0; i < 4; i++) {
+    var d = new Date();
+    d.setDate(d.getDate() + i);
+    var label = (i === 0 ? 'Today' : DAYS[d.getDay()]);
+    var num = d.getDate() + ' ' + MONTHS[d.getMonth()];
+    dates.push({ full: num + ' (' + label + ')', top: label, bottom: num });
+  }
+  selectedDate = dates[0].full;
+
+  function renderDates() {
+    dateGrid.innerHTML = dates.map(function (d) {
+      var active = d.full === selectedDate;
+      return '<button type="button" class="slot-btn" data-date="' + d.full + '" aria-pressed="' + active + '">' +
+        '<span class="block text-[10px] uppercase opacity-75">' + d.top + '</span>' +
+        '<span class="block text-xs font-bold mt-0.5">' + d.bottom + '</span>' +
+        '</button>';
+    }).join('');
+  }
+
+  function renderTimes() {
+    timeGrid.innerHTML = TIMES.map(function (t) {
+      var active = t === selectedTime;
+      return '<button type="button" class="slot-btn" data-time="' + t + '" aria-pressed="' + active + '">' + t + '</button>';
+    }).join('');
+  }
+
+  function updateLink() {
+    var biz = bizInput.value.trim();
+    var msg = 'Hi Vinayak! Mujhe apne business ke liye Free Website Demo book karna hai.\n\n' +
+              '📅 Date: ' + selectedDate + '\n' +
+              '⏰ Time: ' + selectedTime + '\n' +
+              (biz ? '🏪 Business: ' + biz + '\n' : '') +
+              '\nPlease confirm my slot!';
+    bookBtn.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+  }
+
+  dateGrid.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-date]');
+    if (!btn) return;
+    selectedDate = btn.dataset.date;
+    renderDates();
+    updateLink();
+  });
+
+  timeGrid.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-time]');
+    if (!btn) return;
+    selectedTime = btn.dataset.time;
+    renderTimes();
+    updateLink();
+  });
+
+  bizInput.addEventListener('input', updateLink);
+
+  // Mobile Nav
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', function () {
+    var open = mobileMenu.hidden;
+    mobileMenu.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('.m-link').forEach(function (a) {
+    a.addEventListener('click', function () {
+      mobileMenu.hidden = true;
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  renderDates();
+  renderTimes();
+  updateLink();
+})();
 </script>
 </body>
 </html>
